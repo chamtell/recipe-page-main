@@ -1,8 +1,8 @@
-
 /* ------------------------------
    FONT IMPORT
 ------------------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap');
+
 /* ------------------------------
    COLOR VARIABLES
 ------------------------------ */
@@ -25,15 +25,15 @@
    GLOBAL
 ------------------------------ */
 body {
-    font-family: "Outfit", sans-serif;
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
-    background: var(--stone-100);
+    background-color: var(--stone-100);
     color: var(--stone-900);
     margin: 0;
     padding: 0;
-
-    display: flex;
-    justify-content: center;
 }
 
 img {
@@ -42,8 +42,8 @@ img {
     border-radius: 12px;
 }
 
-h1, h2 {
-    font-family: "Young Serif", serif;
+h1,h2 {
+    font-family: 'Young Serif', serif;
     font-weight: 400;
 }
 
@@ -52,18 +52,16 @@ h2 {
     margin-top: 1.5rem;
 }
 
-
 /* ------------------------------
    CARD WRAPPER
 ------------------------------ */
 .recipe-card {
-    background: var(--white);
-    max-width: 740px;
-    margin: 3rem 1rem;
-    padding: 2rem;
+    background-color: var(--white);
     border-radius: var(--radius);
+    max-width: 740px;
+    margin: 3rem 1rem; 
+    padding: 2rem;
 }
-
 /* ------------------------------
    PREPARATION TIME BOX
 ------------------------------ */
@@ -95,17 +93,29 @@ h2 {
 .ingredients ul,
 .instructions ol {
     padding-left: 1.2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--stone-150);
 }
 
 .ingredients li,
 .instructions li {
     margin-bottom: .5rem;
+    
+}
+.instructions li::marker {
+    color: var(--brown-800);
 }
 
 .instructions li strong {
     color: var(--stone-900);
 }
-
+.instructions li span {
+    font-weight: 600;
+    color: var(--stone-900);
+}
+.instructions ol li {
+    padding-left: .5rem;
+}
 /* ------------------------------
    TABLE STYLING
 ------------------------------ */
@@ -114,20 +124,16 @@ h2 {
     border-collapse: collapse;
     margin-top: 1rem;
 }
-
 .nutrition tr {
     border-bottom: 1px solid var(--stone-150);
 }
-
 .nutrition td {
     padding: .75rem 0;
 }
-
 .nutrition td:nth-child(2) {
     color: var(--brown-800);
     font-weight: 600;
 }
-
 /* ------------------------------
    RESPONSIVE
 ------------------------------ */
@@ -142,5 +148,3 @@ h2 {
         margin: -1.4rem -1.4rem 1rem -1.4rem;
     }
 }
-
-
