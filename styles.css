@@ -1,0 +1,146 @@
+
+/* ------------------------------
+   FONT IMPORT
+------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap');
+/* ------------------------------
+   COLOR VARIABLES
+------------------------------ */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+
+    --brown-800: hsl(14, 45%, 36%);
+
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    --radius: 20px;
+}
+
+/* ------------------------------
+   GLOBAL
+------------------------------ */
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    background: var(--stone-100);
+    color: var(--stone-900);
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+h1, h2 {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+}
+
+h2 {
+    color: var(--brown-800);
+    margin-top: 1.5rem;
+}
+
+
+/* ------------------------------
+   CARD WRAPPER
+------------------------------ */
+.recipe-card {
+    background: var(--white);
+    max-width: 740px;
+    margin: 3rem 1rem;
+    padding: 2rem;
+    border-radius: var(--radius);
+}
+
+/* ------------------------------
+   PREPARATION TIME BOX
+------------------------------ */
+.preparation-time {
+    background: var(--rose-50);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.preparation-time h2 {
+    font-family: "Outfit";
+    color: var(--rose-800);
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.preparation-time ul {
+    padding-left: 1.2rem;
+}
+
+.preparation-time li {
+    margin-bottom: .4rem;
+}
+
+/* ------------------------------
+   LISTS
+------------------------------ */
+.ingredients ul,
+.instructions ol {
+    padding-left: 1.2rem;
+}
+
+.ingredients li,
+.instructions li {
+    margin-bottom: .5rem;
+}
+
+.instructions li strong {
+    color: var(--stone-900);
+}
+
+/* ------------------------------
+   TABLE STYLING
+------------------------------ */
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.nutrition tr {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+.nutrition td {
+    padding: .75rem 0;
+}
+
+.nutrition td:nth-child(2) {
+    color: var(--brown-800);
+    font-weight: 600;
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 480px) {
+    .recipe-card {
+        padding: 1.4rem;
+        margin: 1rem;
+    }
+
+    img {
+        border-radius: 0;
+        margin: -1.4rem -1.4rem 1rem -1.4rem;
+    }
+}
+
+
